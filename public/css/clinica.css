@@ -1,0 +1,17 @@
+.container-nav{
+    background: #f8f9fa;
+}
+.section-fluid{
+    height: 100vh;
+}
+.seccion-inicio{
+    background: url(../img/fondo-clinica.png);
+    background-size: cover;
+    background-position: center;
+}
+.fondo-prueva{
+    background: rgb(207, 207, 207);
+}
+#servicios i{
+    font-size: 50px;
+}
