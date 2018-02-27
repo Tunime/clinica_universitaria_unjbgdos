@@ -40,10 +40,7 @@
                                     <td>{{ $usuario->tipo_usuario }}</td>
                                     <td>
                                         <button type="button" class="btn btn-outline-warning">Editar</button>
-                                    {!!Form::open(['action'=>['UsuarioController@delete',$usuario->id_usuario]])!!}
-                                        <button type="submit" class="btn btn-outline-danger">Eliminar</button>
-                                    {!!Form::close()!!}
-                                    
+                                        <button type="button" class="btn btn-outline-danger">Eliminar</button>
                                 </td>
                             </tr>
                         @endforeach
