@@ -31,8 +31,6 @@ class UsuarioController extends Controller
         return view('/usuario',['usuarios'=>$usuarios]);
     }
     public function delete($id){
-        $usuario=usuario::findOrFail($id);
-        $usuario->delete();
-        return redict('/usuario');
+        dd ($id);
     }
 }

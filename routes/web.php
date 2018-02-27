@@ -26,7 +26,7 @@ Route::get('/inicio', function () {
 
 Route::get('/usuario', 'UsuarioController@read');
 Route::post('/usuario','UsuarioController@create');
-Route::post('/usuario/{id}','UsuarioController@delete');
+Route::delete('/usuario/{id}','UsuarioController@delete');
 
 Route::post('/pacientes', 'PacienteController@create');
 Route::get('/pacientes', 'PacienteController@read');

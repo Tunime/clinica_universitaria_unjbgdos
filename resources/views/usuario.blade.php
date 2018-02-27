@@ -39,11 +39,11 @@
                                     <td>{{ $usuario->email }}</td>
                                     <td>{{ $usuario->tipo_usuario }}</td>
                                     <td>
-                                    <form name="delete" method="DELETE" action="/usuario">
-                                        {{ csrf_field() }}
                                         <button type="button" class="btn btn-outline-warning">Editar</button>
-                                        <button type="submit" class="btn btn-outline-danger" name="id" value="{{ $usuario->id_usuario }}">Eliminar</button>
-                                    </form>
+                                    {!!Form::open(['action'=>['UsuarioController@delete',$usuario->id_usuario]])!!}
+                                        <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+                                    {!!Form::close()!!}
+                                    
                                 </td>
                             </tr>
                         @endforeach

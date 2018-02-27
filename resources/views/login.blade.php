@@ -13,19 +13,56 @@
   <body>
 
     <div class="container-fluid d-flex justify-content-center flex-column align-items-center login">
-        <form method="post" action="/login">
+        <form class="form-horizontal" method="POST" action="{{ route('login') }}">
               {{csrf_field()}}
                 <h2>Identificate</h2>
                 <hr>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Correo</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="tucorreo@gmail.com">
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <label for="email" class="col-md-4 control-label">Email/nick</label>
+                    <div class="col-md-6">
+                        <input id="email" type="text" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                    </div>
                 </div>
+                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                      <label for="password" class="col-md-4 control-label">Password</label>
+
+                      <div class="col-md-6">
+                          <input id="password" type="password" class="form-control" name="password" required>
+
+                          @if ($errors->has('password'))
+                              <span class="help-block">
+                                  <strong>{{ $errors->first('password') }}</strong>
+                              </span>
+                          @endif
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="col-md-6 col-md-offset-4">
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Contraseña</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="******">
-                </div>
-                <button type="submit" class="btn btn-primary">Ingresar</button>
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Login
+                                </button>
+
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                        </div>
         </form>
     </div>
     <!-- Optional JavaScript -->
