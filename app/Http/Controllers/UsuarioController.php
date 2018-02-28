@@ -40,5 +40,9 @@ class UsuarioController extends Controller
         usuario::destroy($id);
         return redirect('/usuario');
     }
+    public function edit(Request $request)
+    {
+        return view('usuario/editusuario');
+    }
 
 }

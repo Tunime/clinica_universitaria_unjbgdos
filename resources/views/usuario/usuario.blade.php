@@ -40,7 +40,7 @@
                                     <td>{{ $usuario->tipo_usuario }}</td>
                                     <td>
                                     <form action="{{ route('usuario.destroy',$usuario->id) }}" method="POST">
-                                        <button type="button" class="btn btn-outline-warning">Editar</button>
+                                        <a href="{{ route('usuario.edit',$usuario->id) }}" type="button" class="btn btn-outline-warning" >Edit</a>
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button type="submit" class="btn btn-outline-danger">Delete</button>

@@ -24,14 +24,8 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
-/*Route::get('/usuario', 'UsuarioController@read');
-Route::post('/usuario','UsuarioController@create');
-Route::delete('/usuario/{id}','UsuarioController@delete');*/
 Route::resource('/usuario', 'UsuarioController');
-
-
-Route::post('/pacientes', 'PacienteController@create');
-Route::get('/pacientes', 'PacienteController@read');
+Route::resource('/pacientes', 'PacienteController');
 
 Route::get('/medicos', function () {
     return view('medico');
