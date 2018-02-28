@@ -1,4 +1,4 @@
-@extends('template/menu')
+@extends('../template/menu')
 @section('body')
     <!-- el contenedor de los contenidos -->
     <div class="col-10 contenedor align-items-stretch d-flex justify-content-center align-items-center">
@@ -39,8 +39,12 @@
                                     <td>{{ $usuario->email }}</td>
                                     <td>{{ $usuario->tipo_usuario }}</td>
                                     <td>
+                                    <form action="{{ route('usuario.destroy',$usuario->id) }}" method="POST">
                                         <button type="button" class="btn btn-outline-warning">Editar</button>
-                                        <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -62,15 +66,17 @@
             </div>
             <div class="modal-body">
               <!--contedor-modal--conteido-->
-              <form action="/usuario" method="POST">
+              <form action="{{ route('usuario.store') }}" method="POST">
                 {{ csrf_field() }}
-                <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Nombre</label>
-                  <input type="name" name="nombre"  class="form-control" id="recipient-name">
-                </div>
-                <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Apellido</label>
-                    <input type="lastname" name="apellido" class="form-control" id="recipient-name">
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="recipient-name" class="col-form-label">Nombre</label>
+                        <input type="name" name="nombre"  class="form-control" id="recipient-name">
+                    </div>
+                    <div class="col form-group">
+                        <label for="recipient-name" class="col-form-label">Apellido</label>
+                        <input type="lastname" name="apellido" class="form-control" id="recipient-name">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="recipient-name" class="col-form-label">Nick</label>
@@ -89,7 +95,7 @@
                     <select class="form-control" name="tipo" id="exampleFormControlSelect1">
                       <option>admin</option>
                       <option>invitado</option>
-                      <option>secretaria</option>
+                      <option>Especialista</option>
                     </select>
                   </div>
                   <div class="modal-footer">
