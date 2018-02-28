@@ -49,8 +49,6 @@ class PacienteController extends Controller
     //funcion que elimina datos
     public function destroy($id)
     {
-        paciente::destroy($id);
-        return redirect('/pacientes');
     }
     public function edit(Request $request)
     {

@@ -26,10 +26,10 @@ Route::get('/inicio', function () {
 
 Route::resource('/usuario', 'UsuarioController');
 Route::resource('/pacientes', 'PacienteController');
-
-Route::get('/medicos', function () {
+Route::resource('/medicos', 'MedicoController');
+/*oute::get('/medicos', function () {
     return view('medico');
-});
+});*/
 Route::get('/atenciones', function () {
     return view('atenciones');
 });

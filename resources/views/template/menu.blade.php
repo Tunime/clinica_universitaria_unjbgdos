@@ -48,7 +48,7 @@
                         </li>
                         <li class="nav-item d-flex  align-items-center menu_lateral--item">
                             <i class="material-icons">face</i>
-                            <a class="nav-link" href="#">Medicos</a>
+                            <a class="nav-link" href="/medicos">Medicos</a>
                         </li>
                         <li class="nav-item d-flex  align-items-center menu_lateral--item">
                             <i class="material-icons">description</i>
