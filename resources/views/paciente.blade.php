@@ -26,10 +26,10 @@
                         <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
+                        <th scope="col">Apellidos</th>
                         <th scope="col">Direccion</th>
-                        <th scope="col">genero</th>
-                        <th scope="col">Accion</th>
+                        <th scope="col">Género</th>
+                        <th scope="col">Acción</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -67,24 +67,28 @@
               <form action="/pacientes" method="POST">
                 {{ csrf_field() }}
                 <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Nombres</label>
+                  <label for="recipient-name" class="col-form-label">Nombres:</label>
                   <input type="name" name="nombre"  class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Apellidos</label>
+                    <label for="recipient-name" class="col-form-label">Apellidos:</label>
                     <input type="lastname" name="apellido" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">DNI</label>
+                    <label for="recipient-name" class="col-form-label">DNI:</label>
                     <input type="text" name="dni" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Celular</label>
+                        <label for="recipient-name" class="col-form-label">Celula:</label>
                         <input type="text" name="celular" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Fecha de nacimiento</label>
-                        <input type="text" name="fech_naci" class="form-control" id="recipient-name">
+                    <label for="recipient-name" class="col-form-label">Fecha de nacimient:r</label>
+                    <div class="row col form-group">
+                        <input class=" col form-control" type="text" placeholder="Día">
+                        <input class="col form-control ml-4" type="text" placeholder="Mes">
+                        <input class="col form-control ml-4" type="text" placeholder="Año">
+                    </div>
                 </div>
                 <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Direccion</label>
