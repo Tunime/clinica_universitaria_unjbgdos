@@ -18,7 +18,7 @@
             <ul class=" nav justify-content-end">
                 <li class="nav-item">
                     <a href="#" class="nav-link disabled" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                            {{ Auth::user()->username }} <span class="caret"></span>
+                            {{ Auth::user()->nombre }} <span class="caret"></span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -52,7 +52,7 @@
                         </li>
                         <li class="nav-item d-flex  align-items-center menu_lateral--item">
                             <i class="material-icons">description</i>
-                            <a class="nav-link" href="#">Atenciones</a>
+                            <a class="nav-link" href="/atenciones">Atenciones</a>
                         </li>
                         <li class="nav-item d-flex  align-items-center menu_lateral--item">
                             <i class="material-icons">find_in_page</i>

@@ -37,7 +37,7 @@ class MedicoController extends Controller
         $usuario -> username = $request -> dni;
         $usuario -> email = $request -> dni.'@unjbg.edu.pe';
         $usuario -> password = Hash::make($request -> dni);
-        $usuario -> tipo_usuario = 'paciente';
+        $usuario -> tipo_usuario = 'especialista';
         $usuario->save();
 
         return redirect('/medicos');
