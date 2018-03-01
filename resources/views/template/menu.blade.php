@@ -18,7 +18,7 @@
             <ul class=" nav justify-content-end">
                 <li class="nav-item">
                     <a href="#" class="nav-link disabled" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                            {{ Auth::user()->username }} <span class="caret"></span>
+                            {{ Auth::user()->nombre }} <span class="caret"></span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -34,30 +34,45 @@
         <div class="row seccion">
             <div class="col-2 align-items-stretch menu--lateral">
                     <ul class="nav flex-column menu_lateral">
-                        <li class="nav-item d-flex  align-items-center menu_lateral--item">
-                            <i class="material-icons">home</i>
-                            <a class="nav-link" href="/inicio">Inicio</a>
-                        </li>
-                        <li class="nav-item d-flex  align-items-center menu_lateral--item">
-                            <i class="material-icons">supervisor_account</i>
-                            <a class="nav-link" href="/usuario">Usuarios</a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center menu_lateral--item">
-                            <i class="material-icons">perm_contact_calendar</i>
-                            <a class="nav-link" href="/pacientes">Pacientes</a>
-                        </li>
-                        <li class="nav-item d-flex  align-items-center menu_lateral--item">
-                            <i class="material-icons">face</i>
-                            <a class="nav-link" href="#">Medicos</a>
-                        </li>
-                        <li class="nav-item d-flex  align-items-center menu_lateral--item">
-                            <i class="material-icons">description</i>
-                            <a class="nav-link" href="#">Atenciones</a>
-                        </li>
-                        <li class="nav-item d-flex  align-items-center menu_lateral--item">
-                            <i class="material-icons">find_in_page</i>
-                            <a class="nav-link" href="#">Reportes</a>
-                        </li>
+                        @if( Auth::user()->tipo_usuario == 'admin' )
+                            <li class="nav-item d-flex  align-items-center menu_lateral--item">
+                                <i class="material-icons">home</i>
+                                <a class="nav-link" href="/inicio">Inicio</a>
+                            </li>
+                            <li class="nav-item d-flex  align-items-center menu_lateral--item">
+                                <i class="material-icons">supervisor_account</i>
+                                <a class="nav-link" href="/usuario">Usuarios</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center menu_lateral--item">
+                                <i class="material-icons">perm_contact_calendar</i>
+                                <a class="nav-link" href="/pacientes">Pacientes</a>
+                            </li>
+                            <li class="nav-item d-flex  align-items-center menu_lateral--item">
+                                <i class="material-icons">face</i>
+                                <a class="nav-link" href="/medicos">Medicos</a>
+                            </li>
+                            <li class="nav-item d-flex  align-items-center menu_lateral--item">
+                                <i class="material-icons">description</i>
+                                <a class="nav-link" href="/atenciones">Atenciones</a>
+                            </li>
+                            <li class="nav-item d-flex  align-items-center menu_lateral--item">
+                                <i class="material-icons">find_in_page</i>
+                                <a class="nav-link" href="#">Reportes</a>
+                            </li>
+                        @else
+                            <li class="nav-item d-flex  align-items-center menu_lateral--item">
+                                <i class="material-icons">home</i>
+                                <a class="nav-link" href="/inicio">Inicio</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center menu_lateral--item">
+                                <i class="material-icons">perm_contact_calendar</i>
+                                <a class="nav-link" href="/pacientes">Pacientes</a>
+                            </li>
+                            <li class="nav-item d-flex  align-items-center menu_lateral--item">
+                                <i class="material-icons">description</i>
+                                <a class="nav-link" href="/atenciones">Atenciones</a>
+                            </li>
+                        @endif
                     </ul>
             </div>
             <!--aqui esta el contenido de cada uno-->

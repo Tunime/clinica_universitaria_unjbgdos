@@ -35,14 +35,18 @@
                     <tbody>
                         @foreach ($pacientes as $paciente)
                             <tr>
-                                <th scope="row">{{ $paciente->id_paciente }}</th>
+                                <th scope="row">{{ $paciente->id }}</th>
                                 <td>{{ $paciente->nombre }}</td>
                                 <td>{{ $paciente->apellido }}</td>
                                 <td>{{ $paciente->direccion }}</td>
                                 <td>{{ $paciente->genero }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-outline-warning">Editar</button>
-                                    <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                                    <form action="{{ route('pacientes.destroy',$paciente->id) }}" method="POST">
+                                        <a href="{{ route('pacientes.edit',$paciente->id) }}" type="button" class="btn btn-outline-warning" >Edit</a>
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -66,50 +70,60 @@
               <!--contedor-modal--conteido-->
               <form action="/pacientes" method="POST">
                 {{ csrf_field() }}
-                <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Nombres:</label>
-                  <input type="name" name="nombre"  class="form-control" id="recipient-name">
-                </div>
-                <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Apellidos:</label>
-                    <input type="lastname" name="apellido" class="form-control" id="recipient-name">
-                </div>
-                <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">DNI:</label>
-                    <input type="text" name="dni" class="form-control" id="recipient-name">
-                </div>
-                <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Celula:</label>
-                        <input type="text" name="celular" class="form-control" id="recipient-name">
-                </div>
-                <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Fecha de nacimient:r</label>
-                    <div class="row col form-group">
-                        <input class=" col form-control" type="text" placeholder="Día">
-                        <input class="col form-control ml-4" type="text" placeholder="Mes">
-                        <input class="col form-control ml-4" type="text" placeholder="Año">
+                <div class="row">
+                    <div class=" col form-group">
+                        <label for="recipient-name" class="col-form-label">Nombres</label>
+                        <input type="name" name="nombre"  class="form-control" id="recipient-name">
+                    </div>
+                    <div class="col form-group">
+                        <label for="recipient-name" class="col-form-label">Apellidos</label>
+                        <input type="lastname" name="apellido" class="form-control" id="recipient-name">
                     </div>
                 </div>
+                <div class="row">
+                    <div class=" col form-group">
+                        <label for="recipient-name" class="col-form-label">DNI</label>
+                        <input type="text" name="dni" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="col form-group">
+                            <label for="recipient-name" class="col-form-label">Celular</label>
+                            <input type="text" name="celular" class="form-control" id="recipient-name">
+                    </div>
+                </div>
+                   <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Fecha de nacimient:</label>
+                        <div class="row col form-group">
+                            <input class=" col form-control" type="text" placeholder="Día">
+                            <input class="col form-control ml-4" type="text" placeholder="Mes">
+                            <input class="col form-control ml-4" type="text" placeholder="Año">
+                        </div>
+                </div>
+                <div class=" form-group">
+                        <label for="recipient-name" class="col-form-label">Ocupacion</label>
+                        <input type="text" name="ocupacion" class="form-control" id="recipient-name">
+                    </div>
                 <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Direccion</label>
                         <input type="text" name="direccion" class="form-control" id="recipient-name">
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Estado civil</label>
-                    <select class="form-control" name="estado_civil" id="exampleFormControlSelect1">
-                      <option>Soltero(a)</option>
-                      <option>Casado(a)</option>
-                      <option>Viudo(a)</option>
-                      <option>Divorciado(a)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Genero</label>
-                    <select class="form-control" name="genero" id="exampleFormControlSelect1">
-                        <option>Hombre</option>
-                        <option>Mujer</option>
-                        <option>Compliado</option>
-                    </select>
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="exampleFormControlSelect1">Estado civil</label>
+                        <select class="form-control" name="estado_civil" id="exampleFormControlSelect1">
+                        <option>Soltero(a)</option>
+                        <option>Casado(a)</option>
+                        <option>Viudo(a)</option>
+                        <option>Divorciado(a)</option>
+                        </select>
+                    </div>
+                    <div class="col form-group">
+                        <label for="exampleFormControlSelect1">Genero</label>
+                        <select class="form-control" name="genero" id="exampleFormControlSelect1">
+                            <option>Hombre</option>
+                            <option>Mujer</option>
+                            <option>Compliado</option>
+                        </select>
+                    </div>
                 </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
