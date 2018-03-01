@@ -12,7 +12,7 @@
     <title>Clinica Universitaria</title>
   </head>
   <body>
-    <!--colocamos el menu de blanco-->
+    <!--colocamos el menu de blancoo-->
     <section class="container-fluid container-nav">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Clinica Universitaria</a>
@@ -21,10 +21,26 @@
             </button>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#servicios">Servicios</a>
-                <a class="nav-item nav-link" href="#especialidad">Especialidades</a>
-                <a class="nav-item nav-link" href="#contactanos">contactanos</a>
-                <a class="nav-item nav-link text-warning" href="/login">login</a>
+                @guest
+                    <a class="nav-item nav-link" href="#servicios">Servicios</a>
+                    <a class="nav-item nav-link" href="#especialidad">Especialidades</a>
+                    <a class="nav-item nav-link" href="#contactanos">contactanos</a>
+                    <a class="nav-item nav-link text-warning" href="/login">login</a>
+                @else
+                    <a class="nav-item nav-link" href="#servicios">Servicios</a>
+                    <a class="nav-item nav-link" href="#especialidad">Especialidades</a>
+                    <a class="nav-item nav-link" href="#contactanos">contactanos</a>
+                    <a class="nav-item nav-link" href="#">Historial clinico</a>
+                    <a href="#" class="nav-link disabled" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                            {{ Auth::user()->nombre }} <span class="caret"></span>
+                    </a>
+                    <a class="nav-link active"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Salir
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                @endguest
                 </div>
             </div>
             </nav>

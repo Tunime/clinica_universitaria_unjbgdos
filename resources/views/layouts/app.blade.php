@@ -39,7 +39,7 @@
                         &nbsp;
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
+                    <!-- Right Side Of Naavbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
