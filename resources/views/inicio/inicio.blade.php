@@ -48,9 +48,9 @@
     <!--fin el menu de blanco-->
     <section class="container-fluid section-fluid d-flex align-items-center seccion-inicio">
         <div class="container">
-            <h1 class="text-white"><span class="text-warning">Confia</span> en nosotros<br>Nos dedicamos al 100%<br> con nuestros <span class="text-warning">pacientes</span></h1>
-            <p class="text-white">Una clinica totalmente modernisada<br>Con doctores completemente capacitados en cada area.</p>
-            <button  type="button" class="btn btn-outline-warning btn-lg ">Contactanos</button>
+            <h1 class="text-white"><span class="text-warning">Confía</span> en nosotros,<br>nos dedicamos al 100%<br> con nuestros <span class="text-warning">pacientes.</span></h1>
+            <p class="text-white">Una clínica totalmente modernizada,<br>con doctores completemente capacitados en cada area.</p>
+            <button  type="button" class="btn btn-outline-warning btn-lg ">CONTACTOS</button>
         </div>
         
     </section>
@@ -61,7 +61,7 @@
             <div class="row m-5">
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <i class="material-icons text-warning m-2 rounded-circle border border-warning p-3">airline_seat_flat</i>
-                    <h6 class="text-center">Atencion<br><span class="text-warning">Personalizada</span></h6>
+                    <h6 class="text-center">Atención<br><span class="text-warning">Personalizada</span></h6>
                 </div>
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <i class="material-icons text-warning m-2 rounded-circle border border-warning p-3">local_shipping</i>
