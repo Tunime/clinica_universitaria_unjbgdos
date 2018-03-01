@@ -19,15 +19,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::get('/inicio', function () {
-    return view('inicio');
+Route::group(['middleware' => 'rolesusuario'], function () {
+    Route::get('/inicio', function () {
+        return view('inicio');
+    });
+    Route::resource('/usuario', 'UsuarioController');
+    Route::resource('/pacientes', 'PacienteController');
+    Route::resource('/medicos', 'MedicoController');
+    Route::resource('/atenciones', 'AtencionController');
 });
-
-Route::resource('/usuario', 'UsuarioController');
-Route::resource('/pacientes', 'PacienteController');
-Route::resource('/medicos', 'MedicoController');
-Route::resource('/atenciones', 'AtencionController');
 
 Route::get('/reportes', function () {
     return view('reportes');
