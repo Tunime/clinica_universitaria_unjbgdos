@@ -56,6 +56,7 @@ class UsuarioController extends Controller
         $usuario -> password = Hash::make($request -> contra);
         $usuario -> tipo_usuario = $request -> tipo;
         $usuario->save();
+        
         $auditoriausers = new Auditoriauser();
         $auditoriausers -> id_user = $usuario->id;
         $auditoriausers -> nombre = $request -> autnombre;

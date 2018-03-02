@@ -24,7 +24,7 @@ class MedicoController extends Controller
         $medico -> apellido = $request -> apellido;
         $medico -> celular = $request -> celular;
         $medico -> dni_me = $request -> dni;
-        $medico -> fech_nacimiento = $request -> fech_naci;   
+        $medico -> fech_nacimiento = $request -> dia.'/'.$request -> mes.'/'.$request -> dia;   
         $medico -> direccion = $request -> direccion;
         $medico -> especialidad = $request -> especialidad;
         $medico -> genero = $request -> genero;
