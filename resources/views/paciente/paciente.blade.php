@@ -91,7 +91,7 @@
                     </div>
                 </div>
                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Fecha de nacimient:</label>
+                        <label for="recipient-name" class="col-form-label">Fecha de nacimiento:</label>
                         <div class="row col form-group">
                             <input class=" col form-control" type="text" placeholder="Día">
                             <input class="col form-control ml-4" type="text" placeholder="Mes">
@@ -99,11 +99,11 @@
                         </div>
                 </div>
                 <div class=" form-group">
-                        <label for="recipient-name" class="col-form-label">Ocupacion</label>
+                        <label for="recipient-name" class="col-form-label">Ocupación</label>
                         <input type="text" name="ocupacion" class="form-control" id="recipient-name">
                     </div>
                 <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Direccion</label>
+                        <label for="recipient-name" class="col-form-label">Dirección</label>
                         <input type="text" name="direccion" class="form-control" id="recipient-name">
                 </div>
                 <div class="row">
