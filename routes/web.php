@@ -14,6 +14,12 @@
 Route::get('/', function () {
     return view('inicio.inicio');
 });
+Route::get('/historial', function () {
+    return view('inicio.historial');
+});
+Route::get('/usuario/historial', function () {
+    return view('inicio.historialusuario');
+});
 
 Auth::routes();
 

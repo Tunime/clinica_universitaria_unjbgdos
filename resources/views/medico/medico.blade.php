@@ -20,7 +20,7 @@
                         </form>
                 </div>
             </seccion>
-            <seccion class="seccion-tabla">
+            <seccion class="container">
                 <table class="table table-striped">
                     <thead>
                         <tr>
