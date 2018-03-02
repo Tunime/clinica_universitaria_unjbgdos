@@ -83,6 +83,7 @@ class MedicoController extends Controller
         $auditoriamedicos -> especialidad = $request -> autespecialidad;
         $auditoriamedicos -> genero = $request -> autgenero;
         $auditoriamedicos -> codigo_medico = $request -> autcodmedico;
+        $auditoriamedicos -> razon = $request -> autrazon;
         $auditoriamedicos->save();
         return redirect('/medicos');
         //dd($request->all());
