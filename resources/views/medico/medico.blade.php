@@ -41,7 +41,7 @@
                                 <td>{{ $medico->direccion }}</td>
                                 <td>{{ $medico->genero }}</td>
                                 <td>
-                                        <a href="{{ route('pacientes.edit',$medico->id) }}" type="button" class="btn btn-outline-warning" >Editar</a>
+                                        <a href="{{ route('medicos.edit',$medico->id) }}" type="button" class="btn btn-outline-warning" >Editar</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -95,7 +95,7 @@
                 </div>
                 <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Especialidad:</label>
-                        <input type="text" name="direccion" class="form-control" id="recipient-name">
+                        <input type="text" name="especialidad" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Dirección:</label>

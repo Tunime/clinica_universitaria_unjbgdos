@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\medico;
 use App\usuario;
+use App\Auditoriamedico;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 use Hash;
@@ -51,8 +52,39 @@ class MedicoController extends Controller
         paciente::destroy($id);
         return redirect('/pacientes');
     }
-    public function edit(Request $request)
+    public function edit(Medico $medico)
     {
         //return view('usuario/editusuario');
+        return view('medico/editmedico',compact('medico'));
+    }
+    public function update(Request $request, Medico $medico)
+    {
+        $medicos=medico::findOrfail($medico->id);
+        $medicos -> nombre = $request -> nombre;
+        $medicos -> apellido = $request -> apellido;
+        $medicos -> celular = $request -> celular;
+        $medicos -> dni_me = $request -> dni;
+        $medicos -> fech_nacimiento = $request -> fecha;   
+        $medicos -> direccion = $request -> direccion;
+        $medicos -> especialidad = $request -> especialidad;
+        $medicos -> genero = $request -> genero;
+        $medicos -> codigo_medico = $request -> codmedico;
+        $medicos -> save();
+        //namos la BD de auditoria paciente
+        $auditoriamedicos = new Auditoriamedico();
+
+        $auditoriamedicos -> id_medico = $medico->id;
+        $auditoriamedicos -> nombre = $request -> autnombre;
+        $auditoriamedicos -> apellido = $request -> autapellido;
+        $auditoriamedicos -> celular = $request -> autcelular;
+        $auditoriamedicos -> dni_me = $request -> autdni;
+        $auditoriamedicos -> fech_nacimiento = $request -> autfecha;   
+        $auditoriamedicos -> direccion = $request -> autdireccion;
+        $auditoriamedicos -> especialidad = $request -> autespecialidad;
+        $auditoriamedicos -> genero = $request -> autgenero;
+        $auditoriamedicos -> codigo_medico = $request -> autcodmedico;
+        $auditoriamedicos->save();
+        return redirect('/medicos');
+        //dd($request->all());
     }
 }

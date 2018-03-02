@@ -41,7 +41,7 @@
                         <div class="form-group">
                                 <label for="exampleFormControlSelect1">tipo usuario</label>
                                 <select class="form-control" name="auttipo" id="exampleFormControlSelect1" >
-                                        <option>{{ $usuario->tipo_usuario}}</option
+                                        <option>{{ $usuario->tipo_usuario}}</option>
                                         <option>admin</option>
                                         <option>invitado</option>
                                         <option>Especialista</option>
@@ -74,7 +74,7 @@
                 <div class="form-group">
                         <label for="exampleFormControlSelect1">tipo usuario</label>
                         <select class="form-control" name="tipo" id="exampleFormControlSelect1" >
-                                <option>{{ $usuario->tipo_usuario}}</option
+                                <option>{{ $usuario->tipo_usuario}}</option>
                                 <option>admin</option>
                                 <option>invitado</option>
                                 <option>Especialista</option>

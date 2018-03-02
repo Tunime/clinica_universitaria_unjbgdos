@@ -52,8 +52,9 @@
                 </div>
                 <div class="row">
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1" readonly>{{ $paciente->estado_civil}}</label>
+                        <label for="exampleFormControlSelect1" readonly>Estado civil</label>
                         <select class="form-control" name="autestado_civil" id="exampleFormControlSelect1" readonly>
+                        <option>{{ $paciente->estado_civil}}</option>
                         <option readonly>Soltero(a)</option>
                         <option readonly>Casado(a)</option>
                         <option readonly>Viudo(a)</option>
@@ -61,8 +62,9 @@
                         </select>
                     </div>
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1" readonly>{{ $paciente->genero}}</label>
+                        <label for="exampleFormControlSelect1" readonly>genero</label>
                         <select class="form-control" name="autgenero" id="exampleFormControlSelect1" readonly>
+                            <option>{{ $paciente->genero}}</option>
                             <option>Hombre</option>
                             <option>Mujer</option>
                             <option>Complicado</option>
@@ -108,7 +110,8 @@
                 <div class="row">
                     <div class="col form-group">
                         <label for="exampleFormControlSelect1">Estado Civil</label>
-                        <select class="form-control" name="estado_civil" id="exampleFormControlSelect1" value="{{ $paciente->estado_civil}}">
+                        <select class="form-control" name="estado_civil" id="exampleFormControlSelect1">
+                        <option>{{ $paciente->estado_civil}}</option>
                         <option>Soltero(a)</option>
                         <option>Casado(a)</option>
                         <option>Viudo(a)</option>
@@ -117,7 +120,8 @@
                     </div>
                     <div class="col form-group">
                         <label for="exampleFormControlSelect1">Genero</label>
-                        <select class="form-control" name="genero" id="exampleFormControlSelect1" value="{{ $paciente->genero}}">
+                        <select class="form-control" name="genero" id="exampleFormControlSelect1">
+                            <option>{{ $paciente->genero}}</option>
                             <option>Hombre</option>
                             <option>Mujer</option>
                             <option>Complicado</option>
