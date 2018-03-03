@@ -71,31 +71,35 @@
                     </div>
                     <div class="col form-group">
                         <label for="recipient-name" class="col-form-label">DNI Doctor</label>
-                        <input value="{{ Auth::user()->username }}" readonly="readonly" type="numer" name="dnidoctor" class="form-control" id="recipient-name">
+                        <input value="{{ Auth::user()->username }}" readonly="readonly" type="numer" name="dnidoctor" class="form-control" id="recipient-name"required>
                     </div>
                 </div>
                 <h6>Informacion paciente</h6>
                 <div class="form-group">
                     <label for="recipient-name" class="col-form-label">DNI</label>
-                    <input type="text" name="dnipaciente" class="form-control" id="recipient-name">
+                    <input type="text" name="dnipaciente" class="form-control" id="recipient-name" required>
                 </div>
                 <div class="row">
                     <div class="col form-group">
                         <label for="recipient-name" class="col-form-label">Peso</label>
-                        <input type="text" name="peso" class="form-control" id="recipient-name">
+                        <input type="text" name="peso" class="form-control" id="recipient-name" required>
                     </div>
                     <div class="col form-group">
                         <label for="recipient-name" class="col-form-label">Talla</label>
-                        <input type="text" name="talla" class="form-control" id="recipient-name">
+                        <input type="text" name="talla" class="form-control" id="recipient-name" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Observacion</label>
-                    <textarea class="form-control" name="observacion" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="observacion" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Diagnostico</label>
+                    <textarea class="form-control" name="diagnostico" id="exampleFormControlTextarea1" rows="3" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Tratamiento</label>
-                    <textarea class="form-control" name="tratamiento" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="tratamiento" id="exampleFormControlTextarea1" rows="3" required></textarea>
                 </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

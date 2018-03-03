@@ -27,6 +27,7 @@ class AtencionController extends Controller
          $atencion -> dni_paciente = $request -> dnipaciente;
          $atencion -> dni_medico = $request -> dnidoctor;
          $atencion -> tratamiento = $request -> tratamiento;
+         $atencion -> diagnostico = $request -> diagnostico;
          
          $atencion->save();
          return redirect('/atenciones');
