@@ -14,12 +14,11 @@
 Route::get('/', function () {
     return view('inicio.inicio');
 });
-Route::get('/historial', function () {
-    return view('inicio.historial');
-});
-Route::get('/usuario/historial', function () {
+Route::resource('/historial', 'HistorialController');
+//Route::resource('/usuario/historial','HistorialController');
+/*Route::post('/usuario/historial', function () {
     return view('inicio.historialusuario');
-});
+});*/
 
 Auth::routes();
 

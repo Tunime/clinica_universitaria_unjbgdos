@@ -53,27 +53,75 @@
                     Historial
                 </div>
                 <div class="card-body">
-                    <form action="/histori" method="POST">
-                        {{ csrf_field() }}
-                        <div class="row">
-                            <div class=" col form-group">
-                                <label for="recipient-name" class="col-form-label">Nombres</label>
-                                <input readonly  type="name" name="nombre"  class="form-control" value="{{Auth::user()->nombre}}" id="recipient-name">
-                            </div>
-                            <div class="col form-group">
-                                <label for="recipient-name" class="col-form-label">Apellidos</label>
-                                <input readonly value="{{Auth::user()->apellido}}" type="lastname" name="apellido" class="form-control" id="recipient-name">
-                            </div>
-                            <div class=" col form-group">
-                                <label for="recipient-name" class="col-form-label">DNI</label>
-                                <input readonly value="{{Auth::user()->username}}" type="text" name="dni" class="form-control" id="recipient-name">
-                            </div>
-                            
+                    <div class="row">
+                        <div class="col-2">
+                            <span><h6>Nombre</h6><span>{{$paciente->pa_nombre}}</span></span>
                         </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">generar historial</button>
+                        <div class="col-2">
+                            <span><h6>Apellido</h6><span>{{$paciente->pa_apellido}}</span></span>
                         </div>
-                    </form>
+                        <div class="col-2">
+                            <span><h6>DNI</h6><span>{{$paciente->dni}}</span></span>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-2">
+                            <span><h6>Fecha nacimiento</h6><span>{{$paciente->fech_nacimiento}}</span></span>
+                        </div>
+                        <div class="col-2">
+                            <span><h6>genero</h6><span>{{$paciente->genero}}</span></span>
+                        </div>
+                        <div class="col">
+                            <span><h6>Direcion</h6><span>{{$paciente->direccion}}</span></span>
+                        </div>
+                    </div>
+                    <hr>
+                    @foreach ($historial as $historia)
+                    <div class="row pt-3 pb-3">
+                        <div class="col">
+                            <h2>ATENCION</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <span><h5>Fecha</h5><span>{{$historia->fech_atencion}}</span></span>
+                        </div>
+                        <div class="col-2">
+                            <span><h5>Hora</h5><span>{{$historia->hora_atencion}}</span></span>
+                        </div>
+                        <div class="col-2">
+                            <span><h5>Especialida</h5><span>{{$historia->especialidad}}</span></span>
+                        </div>
+                        <div class="col-3">
+                            <span><h5>Medico</h5><span>{{$historia->nombre}} {{$historia->apellido}}</span></span>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                         <div class="col-2">
+                            <span><h5>Peso</h5><span>{{$historia->peso}}</span> kg</span>
+                        </div>
+                        <div class="col-2">
+                            <span><h5>Talla</h5><span>{{$historia->talla}}</span> mt</span>
+                        </div>
+                        <div class="col">
+                            <h5>Observaciones</h5>
+                            <p>{{$historia->observacion}}</p>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-4">
+                            <h5>Diagnostico</h5>
+                            <p>{{$historia->diagnostico}}</p>
+                        </div>
+                        <div class="col">
+                            <h5>Tratamiento</h5>
+                            <p>{{$historia->tratamiento}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                    @endforeach
+                    
                 </div>
             </div>
         </div>

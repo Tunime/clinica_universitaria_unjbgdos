@@ -53,8 +53,6 @@
                     Historial
                 </div>
                 <div class="card-body">
-                    <form action="/usuario/historial" method="POST">
-                        {{ csrf_field() }}
                         <div class="row">
                             <div class=" col form-group">
                                 <label for="recipient-name" class="col-form-label">Nombres</label>
@@ -71,9 +69,8 @@
                             
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">generar historial</button>
+                            <a href="{{ route('historial.show',Auth::user()->username) }}" class="btn btn-primary">generar historial</a>
                         </div>
-                    </form>
                 </div>
             </div>
         </div>

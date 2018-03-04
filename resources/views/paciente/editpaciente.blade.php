@@ -19,11 +19,11 @@
                         <div class="row">
                     <div class=" col form-group">
                         <label for="recipient-name" class="col-form-label">Nombres:</label>
-                        <input value="{{ $paciente->nombre}}" type="name" name="autnombre"  class="form-control" id="recipient-name" readonly>
+                        <input value="{{ $paciente->pa_nombre}}" type="name" name="autnombre"  class="form-control" id="recipient-name" readonly>
                     </div>
                     <div class="col form-group">
                         <label for="recipient-name" class="col-form-label">Apellidos:</label>
-                        <input value="{{ $paciente->apellido}}" type="lastname" name="autapellido" class="form-control" id="recipient-name" readonly>
+                        <input value="{{ $paciente->pa_apellido}}" type="lastname" name="autapellido" class="form-control" id="recipient-name" readonly>
                     </div>
                 </div>
                 <div class="row">
@@ -76,11 +76,11 @@
                <div class="row">
                     <div class=" col form-group">
                         <label for="recipient-name" class="col-form-label">Nombres:</label>
-                        <input value="{{ $paciente->nombre}}" type="name" name="nombre"  class="form-control" id="recipient-name" required>
+                        <input value="{{ $paciente->pa_nombre}}" type="name" name="nombre"  class="form-control" id="recipient-name" required>
                     </div>
                     <div class="col form-group">
                         <label for="recipient-name" class="col-form-label">Apellidos:</label>
-                        <input value="{{ $paciente->apellido}}" type="lastname" name="apellido" class="form-control" id="recipient-name" required>
+                        <input value="{{ $paciente->pa_apellido}}" type="lastname" name="apellido" class="form-control" id="recipient-name" required>
                     </div>
                 </div>
                 <div class="row">

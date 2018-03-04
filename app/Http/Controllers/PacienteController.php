@@ -22,8 +22,8 @@ class PacienteController extends Controller
     {
         $paciente = new paciente();
         
-        $paciente -> nombre = $request -> nombre;
-        $paciente -> apellido = $request -> apellido;
+        $paciente -> pa_nombre = $request -> nombre;
+        $paciente -> pa_apellido = $request -> apellido;
         $paciente -> celular = $request -> celular;
         $paciente -> dni = $request -> dni;
         $paciente -> fech_nacimiento = $request -> dia.'/'.$request -> mes.'/'.$request -> ano;   

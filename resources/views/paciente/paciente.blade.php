@@ -36,8 +36,8 @@
                         @foreach ($pacientes as $paciente)
                             <tr>
                                 <th scope="row">{{ $paciente->id }}</th>
-                                <td>{{ $paciente->nombre }}</td>
-                                <td>{{ $paciente->apellido }}</td>
+                                <td>{{ $paciente->pa_nombre }}</td>
+                                <td>{{ $paciente->pa_apellido }}</td>
                                 <td>{{ $paciente->direccion }}</td>
                                 <td>{{ $paciente->genero }}</td>
                                 <td>
