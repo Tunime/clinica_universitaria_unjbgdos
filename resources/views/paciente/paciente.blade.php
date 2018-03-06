@@ -11,13 +11,14 @@
             <hr>
             <seccion class="row">
                 <div class="col-3">
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevopaciente">+ AGREGAR PACIENTE</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevopaciente">+ NUEVO PACIENTE</button>
                 </div>
                 <div class="col-9 d-flex justify-content-end">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar paciente" aria-label="Buscar paciente">
+                    <form class="form-inline" action="/pacientes" method="get">
+                        {{ csrf_field() }}
+                        <input name ="name" class="form-control mr-sm-2" type="search" placeholder="Buscar paciente" aria-label="Buscar paciente">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
-                        </form>
+                    </form>
                 </div>
             </seccion>
             <seccion class="container">
@@ -42,10 +43,10 @@
                                 <td>{{ $paciente->genero }}</td>
                                 <td>
                                     <form action="{{ route('pacientes.destroy',$paciente->id) }}" method="POST">
-                                        <a href="{{ route('pacientes.edit',$paciente->id) }}" type="button" class="btn btn-outline-warning" >Ediar</a>
+                                        <a href="{{ route('pacientes.edit',$paciente->id) }}" type="button" class="btn btn-outline-warning" >EDITAR</a>
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+                                        <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
                                     </form>
                                 </td>
                             </tr>

@@ -11,13 +11,13 @@
             <hr>
             <seccion class="row">
                 <div class="col-3">
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevopaciente">+ nuevo Atencion</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevopaciente">+ NUEVA ATENCIÓN</button>
                 </div>
                 <div class="col-9 d-flex justify-content-end">
                     <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                        </form>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar atención" aria-label="Buscar atención">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+                    </form>
                 </div>
             </seccion>
             <seccion class="container">
@@ -26,9 +26,9 @@
                         <tr>
                         <th scope="col">#</th>
                         <th scope="col">Paciente</th>
-                        <th scope="col">Observacion</th>
+                        <th scope="col">Observación</th>
                         <th scope="col">Tratamiento</th>
-                        <th scope="col">Accion</th>
+                        <th scope="col">Acción</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,7 +39,7 @@
                                 <td>{{ $atencion->observacion }}</td>
                                 <td>{{ $atencion->tratamiento }}</td>
                                 <td>
-                                    <a href="{{ route('pacientes.edit',$atencion->id) }}" type="button" class="btn btn-outline-warning" >Edit</a>
+                                    <a href="{{ route('pacientes.edit',$atencion->id) }}" type="button" class="btn btn-outline-warning" >EDITAR</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -77,7 +77,7 @@
                 <h6>Informacion paciente</h6>
                 <div class="form-group">
                     <label for="recipient-name" class="col-form-label">DNI</label>
-                    <input type="text" name="dnipaciente" class="form-control" id="recipient-name" required>
+                    <input id="autodni" type="text" name="dnipaciente" class="form-control" id="recipient-name" required>
                 </div>
                 <div class="row">
                     <div class="col form-group">

@@ -11,7 +11,8 @@
             <hr>
             <seccion class="row">
                 <div class="col-3">
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevousuario">+ NUEVO USUARIO
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevousuario">+ NUEVO USUARIO</button>
+
                 </div>
                 <div class="col-9 d-flex justify-content-end">
                     <form class="form-inline">
@@ -27,8 +28,8 @@
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Nick</th>
-                        <th scope="col">tipo</th>
-                        <th scope="col">Accion</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Acción</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,10 +41,10 @@
                                     <td>{{ $usuario->tipo_usuario }}</td>
                                     <td>
                                     <form action="{{ route('usuario.destroy',$usuario->id) }}" method="POST">
-                                        <a href="{{ route('usuario.edit',$usuario->id) }}" type="button" class="btn btn-outline-warning" >Edit</a>
+                                        <a href="{{ route('usuario.edit',$usuario->id) }}" type="button" class="btn btn-outline-warning" >EDITAR</a>
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                        <button type="submit" class="btn btn-outline-danger">BORRAR</button>
                                     </form>
                                 </td>
                             </tr>
@@ -59,7 +60,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalPopoversLabel">Nuevo usuario</h5>
+              <h5 class="modal-title" id="exampleModalPopoversLabel">NUEVO USUARIO</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">×</span>
               </button>
@@ -83,7 +84,7 @@
                     <input type="text" name="nick" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">email</label>
+                    <label for="recipient-name" class="col-form-label">Email</label>
                     <input type="email" name="email" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
@@ -91,16 +92,16 @@
                     <input type="password" name="contra" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">tipo usuario</label>
+                    <label for="exampleFormControlSelect1">Tipo usuario</label>
                     <select class="form-control" name="tipo" id="exampleFormControlSelect1">
-                      <option>admin</option>
-                      <option>invitado</option>
+                      <option>Administrador</option>
+                      <option>Invitado</option>
                       <option>Especialista</option>
                     </select>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Gardar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+                    <button type="submit" class="btn btn-primary">GUARDAR</button>
                   </div>
               </form>
             </div>

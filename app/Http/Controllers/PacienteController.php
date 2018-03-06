@@ -17,6 +17,9 @@ class PacienteController extends Controller
     {
         $pacientes = paciente::all();
         return view('paciente.paciente',['pacientes'=>$pacientes]);
+        
+        ///$pacientes = paciente::nombre($request->get('name'));
+        //return view('paciente.paciente',['pacientes'=>$pacientes]);
     }
     public function store(Request $request)
     {
