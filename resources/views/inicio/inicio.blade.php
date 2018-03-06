@@ -29,8 +29,8 @@
                 @else
                     <a class="nav-item nav-link" href="#servicios">Servicios</a>
                     <a class="nav-item nav-link" href="#especialidad">Especialidades</a>
-                    <a class="nav-item nav-link" href="#contactanos">contactanos</a>
-                    <a class="nav-item nav-link" href="/historial">Historial clinico</a>
+                    <a class="nav-item nav-link" href="#contactanos">Contáctanos</a>
+                    <a class="nav-item nav-link" href="/historial">Historial clínico</a>
                     <a href="#" class="nav-link disabled" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                             {{ Auth::user()->nombre }} <span class="caret"></span>
                     </a>

@@ -4,7 +4,7 @@
         <seccion class="container contenedor--contenido">
         <div class="row pt-4">
             <div class="col">
-                <h2 class="display-4">Bienvenido {{ Auth::user()->nombre }}</h2>
+                <h2 class="display-4">BIENVENIDO {{ Auth::user()->nombre }}</h2>
             </div>
         </div>
             <div class="row pt-4">
@@ -12,7 +12,7 @@
                     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title display-3">{{ $paciente->pacount}}</h5>
-                            <p class="card-text">Cantidad de doctores en el sistema</p>
+                            <p class="card-text">Cantidad de Doctores en el sistema</p>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                     <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title display-3">{{ $atencion->atecount}}</h5>
-                            <p class="card-text">Cantidad de atenciones en el sistema</p>
+                            <p class="card-text">Cantidad de Atenciones en el sistema</p>
                         </div>
                     </div>
                 </div>

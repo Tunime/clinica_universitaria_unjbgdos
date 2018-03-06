@@ -11,7 +11,7 @@
             <hr>
             <seccion class="row">
                 <div class="col-3">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nuevopaciente">+ AGREGAR PACIENTE</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevopaciente">+ NUEVO PACIENTE</button>
                 </div>
                 <div class="col-9 d-flex justify-content-end">
                     <form class="form-inline" action="/pacientes" method="get">
@@ -43,10 +43,10 @@
                                 <td>{{ $paciente->genero }}</td>
                                 <td>
                                     <form action="{{ route('pacientes.destroy',$paciente->id) }}" method="POST">
-                                        <a href="{{ route('pacientes.edit',$paciente->id) }}" type="button" class="btn btn-outline-warning" >Ediar</a>
+                                        <a href="{{ route('pacientes.edit',$paciente->id) }}" type="button" class="btn btn-outline-warning" >EDITAR</a>
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+                                        <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
                                     </form>
                                 </td>
                             </tr>

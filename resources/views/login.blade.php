@@ -8,14 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
-    <title>login</title>
+    <title>ingresar</title>
   </head>
   <body>
-
     <div class="container-fluid d-flex justify-content-center flex-column align-items-center login">
         <form class="form-horizontal" method="POST" action="{{ route('login') }}">
               {{csrf_field()}}
-                <h2>Identificate</h2>
+                <h2>BIENVENIDO<br>humano</h2>
                 <hr>
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     <label for="email" class="col-md-4 control-label">Email/nick</label>
@@ -65,6 +64,9 @@
                         </div>
         </form>
     </div>
+  </body>
+
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
