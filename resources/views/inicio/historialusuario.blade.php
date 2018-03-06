@@ -15,7 +15,7 @@
     <!--colocamos el menu de blancoo-->
     <section class="container-fluid container-nav">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Clinica Universitaria</a>
+            <a class="navbar-brand" href="#">Clínica Universitaria</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,8 +29,8 @@
                 @else
                     <a class="nav-item nav-link" href="/#servicios">Servicios</a>
                     <a class="nav-item nav-link" href="/#especialidad">Especialidades</a>
-                    <a class="nav-item nav-link" href="/#contactanos">contactanos</a>
-                    <a class="nav-item nav-link" href="/usuario/historial">Historial clinico</a>
+                    <a class="nav-item nav-link" href="/#contactanos">Contáctanos</a>
+                    <a class="nav-item nav-link" href="/usuario/historial">Historial clínico</a>
                     <a href="#" class="nav-link disabled" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                             {{ Auth::user()->nombre }} <span class="caret"></span>
                     </a>

@@ -78,11 +78,11 @@
                 <div class="row">
                     <div class=" col form-group">
                         <label for="recipient-name" class="col-form-label">DNI:</label>
-                        <input type="text" name="dni" class="form-control" maxlength="10" id="recipient-name">
+                        <input type="number" name="dni" class="form-control" maxlength="8" id="recipient-name">
                     </div>
                     <div class="col form-group">
                             <label for="recipient-name" class="col-form-label">Celular:</label>
-                            <input type="text" name="celular" class="form-control" id="recipient-name">
+                            <input type="number" name="celular" class="form-control" maxlength="9" id="recipient-name">
                     </div>
                 </div>
                 <div class="form-group">
