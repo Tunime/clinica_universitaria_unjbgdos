@@ -4,7 +4,7 @@
         <seccion class="container contenedor--contenido">
         <div class="row pt-4">
             <div class="col">
-                <h2 class="display-4">BIENVENIDO {{ Auth::user()->nombre }}</h2>
+                <h2 class="display-5">BIENVENIDO {{ Auth::user()->nombre }}</h2>
             </div>
         </div>
             <div class="row pt-4">

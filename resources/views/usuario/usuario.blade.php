@@ -11,7 +11,7 @@
             <hr>
             <seccion class="row">
                 <div class="col-3">
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevousuario">+ NUEVO USUARIO</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nuevousuario">+ NUEVO USUARIO</button>
 
                 </div>
                 <div class="col-9 d-flex justify-content-end">

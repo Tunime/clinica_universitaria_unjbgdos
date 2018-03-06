@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/clinica.css">
     <title>login</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
         <form class="form-horizontal" method="POST" action="{{ route('login') }}">
               {{csrf_field()}}
               <img style="height: 100px;" src="img/logounjbg.png" class="rounded mx-auto d-block" alt="Responsive image">
-                <h3 class="mb-0 text-center">Sistema de gestion de la clinica UNJBG</h3>
+                <h5 class="mb-0 text-center">Sistema de gestion de <br>la clinica <span class="txtunjbg">UNJBG</span></h5>
                 <hr>
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     <label for="email" class="col-md-4 control-label">Email/nick</label>
@@ -51,12 +52,10 @@
                       </div>
                   </div>
 
-                <div class="form-group">
-                    <div class="col-md-8 col-md-offset-4">
-                        <button type="submit" class="btn btn-primary">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
                             Iniciar
                         </button>
-                    </div>
                 </div>
         </form>
     </div>
