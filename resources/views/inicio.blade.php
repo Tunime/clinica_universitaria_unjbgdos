@@ -11,7 +11,7 @@
                 <div class="col">
                     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title display-3">{{ $paciente->pacount}}</h5>
+                            <h5 class="card-title display-3">{{ $doctor->docount}}</h5>
                             <p class="card-text">Cantidad de Doctores en el sistema</p>
                         </div>
                     </div>
@@ -19,7 +19,7 @@
                 <div class="col">
                     <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title display-3">{{ $doctor->docount}}</h5>
+                            <h5 class="card-title display-3">{{$paciente->pacount}}</h5>
                             <p class="card-text">Cantidad de Pacientes en el sistema</p>
                         </div>
                     </div>
