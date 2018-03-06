@@ -62,8 +62,8 @@ class PacienteController extends Controller
     public function update(Request $request, Paciente $paciente)
     {
         $pacientes=paciente::findOrfail($paciente->id);
-        $pacientes -> nombre = $request -> nombre;
-        $pacientes -> apellido = $request -> apellido;
+        $pacientes -> pa_nombre = $request -> nombre;
+        $pacientes -> pa_apellido = $request -> apellido;
         $pacientes -> celular = $request -> celular;
         $pacientes -> dni = $request -> dni;
         $pacientes -> fech_nacimiento = $request -> fecha;   

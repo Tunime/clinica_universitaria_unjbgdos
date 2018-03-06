@@ -13,4 +13,5 @@ class AuditoriapacienteController extends Controller
         $auditoriapacientes = Auditoriapaciente::all();
         return view('auditoria.pacientes',['auditoriapacientes'=>$auditoriapacientes]);
     }
+    
 }

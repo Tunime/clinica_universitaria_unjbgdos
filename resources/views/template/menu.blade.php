@@ -63,7 +63,7 @@
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
-                                <a class="nav-link" href="/auditoria/pacientes">Auditoria<br>Paciente</a>
+                                <a class="nav-link" href="/auditoria/paciente">Auditoria<br>Paciente</a>
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>

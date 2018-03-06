@@ -1,12 +1,12 @@
 .login{
-    background: url("../img/fondo.png");
+    background: url("../img/fondo-unjbg.png");
     height: 100vh;
     background-size: cover;
     background-position: center;
 }
 .login form{
     background: #fff;
-    padding: 4em;
+    padding:2em 4em;
     border-radius: 10px;
 }
 .btn-primary {

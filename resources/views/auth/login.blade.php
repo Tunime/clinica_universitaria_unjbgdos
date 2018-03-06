@@ -15,7 +15,8 @@
     <div class="container-fluid d-flex justify-content-center flex-column align-items-center login">
         <form class="form-horizontal" method="POST" action="{{ route('login') }}">
               {{csrf_field()}}
-                <h2>Identificate</h2>
+              <img style="height: 100px;" src="img/logounjbg.png" class="rounded mx-auto d-block" alt="Responsive image">
+                <h3 class="mb-0 text-center">Sistema de gestion de la clinica UNJBG</h3>
                 <hr>
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     <label for="email" class="col-md-4 control-label">Email/nick</label>
