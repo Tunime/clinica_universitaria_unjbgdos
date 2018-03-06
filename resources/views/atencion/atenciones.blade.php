@@ -11,13 +11,13 @@
             <hr>
             <seccion class="row">
                 <div class="col-3">
-                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#nuevopaciente">+ nuevo Atencion</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nuevopaciente">+ nueva Atencion</button>
                 </div>
                 <div class="col-9 d-flex justify-content-end">
                     <form class="form-inline">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                        </form>
+                    </form>
                 </div>
             </seccion>
             <seccion class="container">
@@ -77,7 +77,7 @@
                 <h6>Informacion paciente</h6>
                 <div class="form-group">
                     <label for="recipient-name" class="col-form-label">DNI</label>
-                    <input type="text" name="dnipaciente" class="form-control" id="recipient-name" required>
+                    <input id="autodni" type="text" name="dnipaciente" class="form-control" id="recipient-name" required>
                 </div>
                 <div class="row">
                     <div class="col form-group">

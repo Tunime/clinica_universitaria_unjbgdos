@@ -15,11 +15,11 @@
     <!--colocamos el menu de blancoo-->
     <section class="container-fluid container-nav">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">CLINICA UNIVERSITARIA</a>
+            <a class="navbar-brand" href="/">CLINICA <span class="txtunjbg">UNIVERSITARIA</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                 @guest
                     <a class="nav-item nav-link" href="#servicios">Servicios</a>
@@ -76,25 +76,7 @@
                     <h6 class="text-center">Buenos<br><span class="text-warning">Implementos</span></h6>
                 </div>
             </div>
-            <div class="container">
-                <div class="row m-5">
-                    <div class="col d-flex flex-column justify-content-center align-items-center">
-                    <i class="material-icons text-warning m-2 rounded-circle border border-warning p-3">airline_seat_flat</i>
-                    <h6 class="text-center">Atención<br><span class="text-warning">Personalizada</span></h6>
-                </div>
-                    <div class="col d-flex flex-column justify-content-center align-items-center">
-                    <i class="material-icons text-warning m-2 rounded-circle border border-warning p-3">local_shipping</i>
-                    <h6 class="text-center">Contamos<br>con <span class="text-warning">unidades</span></h6>
-                </div>
-                    <div class="col d-flex flex-column justify-content-center align-items-center">
-                    <i class="material-icons text-warning m-2 rounded-circle border border-warning p-3">local_shipping</i>
-                    <h6 class="text-center">Doctores<br><span class="text-warning">especializados</span></h6>
-                </div>
-                    <div class="col d-flex flex-column justify-content-center align-items-center">
-                    <i class="material-icons text-warning m-2 rounded-circle border border-warning p-3">blur_on</i>
-                    <h6 class="text-center">Buenos<br><span class="text-warning">Implementos</span></h6>
-                </div>
-            </div>
+            
         </div>
     </section><!--fin del MODULO DE SERVICIOS-->
     <!--inicio del MODULO DE ESPECIALIDAD-->

@@ -26,14 +26,33 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'rolesusuario'], function () {
     Route::get('/inicio', function () {
-        return view('inicio');
+        //return view('inicio');
+        $paciente = DB::table('pacientes')
+            ->selectRaw('count(*) as pacount')
+            ->first();
+        $doctor = DB::table('medicos')
+            ->selectRaw('count(*) as docount')
+            ->first();
+        $atencion = DB::table('atenciones')
+            ->selectRaw('count(*) as atecount')
+            ->first();
+        //dd($users);
+        return view('inicio',compact('paciente','doctor','atencion'));
     });
     Route::resource('/usuario', 'UsuarioController');
     Route::resource('/pacientes', 'PacienteController');
     Route::resource('/medicos', 'MedicoController');
     Route::resource('/atenciones', 'AtencionController');
+    Route::resource('/auditoria/medico', 'AuditoriamedicoController');
+    Route::resource('/auditoria/pacientes', 'AuditoriapacienteController');
 });
 
 Route::get('/reportes', function () {
     return view('reportes');
+});
+Route::get('/dni', function () {
+    $paciente = DB::table('pacientes')
+    ->select("dni","pa_nombre","pa_apellido")
+    ->get();
+    return Response::json($paciente);
 });

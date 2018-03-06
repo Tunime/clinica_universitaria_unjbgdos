@@ -11,13 +11,13 @@
 }
 .btn-primary {
     color: #fff;
-    background-color: #e84393;
-    border-color: #e84393;
+    background-color: #570000;
+    border-color: #570000;
 }
 .btn-primary:hover {
     color: #fff;
-    background-color: #a73d70;
-    border-color: #a73d70;
+    background-color: #852828;
+    border-color: #852828;
 }
 .seccion{
     height: 100vh;
@@ -29,7 +29,7 @@
     box-shadow: 2px 2px 5px rgb(31, 31, 31);
 }
 .menu--lateral{
-    background: #3A3F53;
+    background: #852828;
     padding: 4em 0 0 0;
     box-shadow: 500px 500px 500px 500px rgb(31, 31, 31);
 }
@@ -62,5 +62,6 @@
 .contenedor--contenido_titulo{
     padding: 1em 0 0 0;
 }
+
 
 
