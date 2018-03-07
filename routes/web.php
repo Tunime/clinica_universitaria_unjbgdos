@@ -45,6 +45,7 @@ Route::group(['middleware' => 'rolesusuario'], function () {
     Route::resource('/atenciones', 'AtencionController');
     Route::resource('/auditoria/medico', 'AuditoriamedicoController');
     Route::resource('/auditoria/paciente', 'AuditoriapacienteController');
+    Route::resource('/auditoria/usuario', 'AuditoriauserController');
 });
 
 Route::get('/reportes', function () {

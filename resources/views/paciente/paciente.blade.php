@@ -48,6 +48,8 @@
                         @endforeach
                     </tbody>
                 </table>
+                {{$pacientes->render("pagination::bootstrap-4")}}
+
             </seccion>
             
         </seccion>

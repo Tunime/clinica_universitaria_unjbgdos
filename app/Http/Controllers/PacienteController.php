@@ -15,11 +15,9 @@ class PacienteController extends Controller
     //
     public function index(Request $request)
     {
-        $pacientes = paciente::all();
+        $pacientes = paciente::paginate(5);
         return view('paciente.paciente',['pacientes'=>$pacientes]);
         
-        ///$pacientes = paciente::nombre($request->get('name'));
-        //return view('paciente.paciente',['pacientes'=>$pacientes]);
     }
     public function store(Request $request)
     {

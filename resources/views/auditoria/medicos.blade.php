@@ -5,7 +5,7 @@
         <seccion class="container contenedor--contenido">
             <seccion class="row contenedor--contenido_titulo">
                 <div class="col">
-                    <h3>Cambios echos a Doctores</h3>
+                    <h3>Cambios hechos a Doctores</h3>
                 </div>
             </seccion>
             <hr>
@@ -34,6 +34,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                {{$auditoriamedicos->render("pagination::bootstrap-4")}}
             </seccion>
             
         </seccion>

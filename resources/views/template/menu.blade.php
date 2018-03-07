@@ -53,10 +53,6 @@
                                 <i class="material-icons">face</i>
                                 <a class="nav-link" href="/medicos">Medicos</a>
                             </li>
-                            <li class="nav-item d-flex  align-items-center menu_lateral--item">
-                                <i class="material-icons">description</i>
-                                <a class="nav-link" href="/atenciones">Atenciones</a>
-                            </li>
                             <!--<li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
                                 <a class="nav-link" href="#">Reportes</a>-->
@@ -68,6 +64,10 @@
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
                                 <a class="nav-link" href="/auditoria/medico">Auditoria<br>Medicos</a>
+                            </li>
+                            <li class="nav-item d-flex  align-items-center menu_lateral--item">
+                                <i class="material-icons">find_in_page</i>
+                                <a class="nav-link" href="/auditoria/usuario">Auditoria<br>usuarios</a>
                             </li>
                         @else
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">

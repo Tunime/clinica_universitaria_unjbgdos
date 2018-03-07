@@ -41,12 +41,13 @@
                                 <td>{{ $medico->direccion }}</td>
                                 <td>{{ $medico->genero }}</td>
                                 <td>
-                                        <a href="{{ route('medicos.edit',$medico->id) }}" type="button" class="btn btn-outline-warning" >Editar</a>
+                                    <a href="{{ route('medicos.edit',$medico->id) }}" type="button" class="btn btn-outline-warning" >Editar</a>
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
+                {{$medicos->render("pagination::bootstrap-4")}}
             </seccion>
             
         </seccion>

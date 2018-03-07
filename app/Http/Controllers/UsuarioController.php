@@ -15,8 +15,12 @@ class UsuarioController extends Controller
     //esta funcion se ejcuta al principio
     public function index(Request $request)
     {
-        $usuarios = usuario::all();
+        $usuarios = usuario::paginate(5);
         return view('usuario/usuario',['usuarios'=>$usuarios]);
+
+
+        //$usuarios = usuario::paginate(4);
+        //return view('usuario/usuario')->withUsers($usuarios);
     }
     //funcion que relisa la insercion de datos
     public function store(Request $request)

@@ -10,7 +10,7 @@ class AuditoriamedicoController extends Controller
     //
     public function index(Request $request)
     {
-        $auditoriamedicos = Auditoriamedico::all();
+        $auditoriamedicos = Auditoriamedico::paginate(5);
         return view('auditoria.medicos',['auditoriamedicos'=>$auditoriamedicos]);
     }
 }

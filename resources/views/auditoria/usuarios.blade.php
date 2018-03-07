@@ -17,24 +17,24 @@
                         <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nombre apellido</th>
-                        <th scope="col">Ocupacion</th>
-                        <th scope="col">DNI</th>
-                        <th scope="col">Razon del cambio</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">tipo usuario</th>
+                        <th scope="col">razon</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($auditoriapacientes as $auditoriapaciente)
+                        @foreach ($auditoriausers as $auditoriauser)
                             <tr>
-                                <th scope="row">{{ $auditoriapaciente->id }}</th>
-                                <td>{{ $auditoriapaciente->nombre }}{{ $auditoriapaciente->apellido }}</td>
-                                <td>{{ $auditoriapaciente->ocupacion }}</td>
-                                <td>{{ $auditoriapaciente->dni}}</td>
-                                <td>{{ $auditoriapaciente->razon }}</td>
+                                <th scope="row">{{ $auditoriauser->id }}</th>
+                                <td>{{ $auditoriauser->nombre }}{{ $auditoriauser->apellido }}</td>
+                                <td>{{ $auditoriauser->email }}</td>
+                                <td>{{ $auditoriauser->tipo_usuario}}</td>
+                                <td>{{ $auditoriauser->razon }}</td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
-                {{$auditoriapacientes->render("pagination::bootstrap-4")}}
+                {{$auditoriausers->render("pagination::bootstrap-4")}}
             </seccion>
             
         </seccion>

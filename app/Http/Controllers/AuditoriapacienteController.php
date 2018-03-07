@@ -10,7 +10,7 @@ class AuditoriapacienteController extends Controller
     //
     public function index(Request $request)
     {
-        $auditoriapacientes = Auditoriapaciente::all();
+        $auditoriapacientes = Auditoriapaciente::paginate(5);
         return view('auditoria.pacientes',['auditoriapacientes'=>$auditoriapacientes]);
     }
     

@@ -11,7 +11,7 @@ class AtencionController extends Controller
      //esta funcion se ejcuta al principio
      public function index(Request $request)
      {
-         $atenciones = atencion::all();
+         $atenciones = atencion::paginate(5);
          return view('atencion.atenciones',['atenciones'=>$atenciones]);
      }
      //funcion que relisa la insercion de datos

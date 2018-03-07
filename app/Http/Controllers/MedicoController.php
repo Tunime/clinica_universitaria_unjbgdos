@@ -14,7 +14,7 @@ class MedicoController extends Controller
     //
     public function index(Request $request)
     {
-        $medicos = medico::all();
+        $medicos = medico::paginate(5);
         return view('medico.medico',['medicos'=>$medicos]);
     }
     public function store(Request $request)

@@ -45,6 +45,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                {{$atenciones->render("pagination::bootstrap-4")}}
             </seccion>
             
         </seccion>

@@ -9,4 +9,5 @@ class usuario extends Model
     //defnimos la tabla
     protected $table = 'users';
     public $timestamps =false;
+
 }

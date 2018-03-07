@@ -51,6 +51,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                {{$usuarios->render("pagination::bootstrap-4")}}
             </seccion>
             
         </seccion>
