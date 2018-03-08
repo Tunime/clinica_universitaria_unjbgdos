@@ -39,7 +39,7 @@
                                 <td>{{ $atencion->observacion }}</td>
                                 <td>{{ $atencion->tratamiento }}</td>
                                 <td>
-                                    <a href="{{ route('pacientes.edit',$atencion->id) }}" type="button" class="btn btn-outline-warning" >EDITAR</a>
+                                    <a href="{{ route('atenciones.edit',$atencion->id) }}" type="button" class="btn btn-outline-warning" >IMPRIMIR</a>
                                 </td>
                             </tr>
                         @endforeach

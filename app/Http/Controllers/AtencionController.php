@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\atencion;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use DB;
+use PDF;
 
 class AtencionController extends Controller
 {
@@ -36,14 +38,37 @@ class AtencionController extends Controller
      {
      }
      //funcion que elimina datos
-     public function destroy($id)
+     public function destroy()
      {
          
         /* usuario::destroy($id);
          return redirect('/usuario');*/
      }
-     public function edit(Request $request)
+     public function edit($id)
      {
+         //dd($id);
+         /*$paciente = DB::table('pacientes')
+            ->where('pacientes.dni','=',$username)
+            ->first();
+        $historial = DB::table('pacientes')
+        	->join('atenciones','dni','=','atenciones.dni_paciente')
+            ->join('medicos','dni_medico','=','medicos.dni_me')
+            ->where('pacientes.dni','=',$username)
+            ->get();
+*/
+
+         $atencion = DB::table('atenciones')
+         ->where('atenciones.id','=',$id)
+         ->join('pacientes','dni','=','atenciones.dni_paciente')
+         ->join('medicos','dni_me','=','atenciones.dni_medico')
+         ->first();
+         //dd($atencion);
+
+
+         PDF::setOptions(['dpi' => 150, 'defaultPaperSize' => 'a6']);
+         $pdf = PDF::loadView('pdf.pdfatenciones', compact('atencion'));
+         return $pdf->download('hdtuto.pdf');
+         //return $pdf->stream();
          //return view('usuario/editusuario');
      }
 }

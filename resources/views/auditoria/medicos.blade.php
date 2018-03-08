@@ -19,6 +19,7 @@
                         <th scope="col">Nombre apellido</th>
                         <th scope="col">Codigo medico</th>
                         <th scope="col">DNI</th>
+                        <th scope="col">Celular</th>
                         <th scope="col">Razon del cambio</th>
                         </tr>
                     </thead>
@@ -29,6 +30,7 @@
                                 <td>{{ $auditoriamedico->nombre }}{{ $auditoriamedico->apellido }}</td>
                                 <td>{{ $auditoriamedico->codigo_medico }}</td>
                                 <td>{{ $auditoriamedico->dni_me }}</td>
+                                <td>{{ $auditoriamedico->celular }}</td>
                                 <td>{{ $auditoriamedico->razon }}</td>
                             </tr>
                         @endforeach
