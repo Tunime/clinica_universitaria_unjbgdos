@@ -9,10 +9,20 @@ use App\Auditoriapaciente;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 use Hash;
+use DB;
 
 class PacienteController extends Controller
 {
     //
+    public function mySearch(Request $request)
+    {
+        $pacientes = DB::table('pacientes')
+        ->where('pa_nombre','like','%'.$request->search.'%')
+        ->paginate(5);
+        return view('paciente.paciente',compact('pacientes'));
+        
+    }
+
     public function index(Request $request)
     {
         $pacientes = paciente::paginate(5);

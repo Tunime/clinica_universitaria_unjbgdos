@@ -9,9 +9,19 @@ use App\Auditoriamedico;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 use Hash;
+use DB;
 class MedicoController extends Controller
 {
     //
+    public function mySearch(Request $request)
+    {
+        $medicos = DB::table('medicos')
+        ->where('nombre','like','%'.$request->search.'%')
+        ->paginate(5);
+        return view('medico.medico',compact('medicos'));
+        
+    }
+
     public function index(Request $request)
     {
         $medicos = medico::paginate(5);

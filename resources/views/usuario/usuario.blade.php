@@ -15,10 +15,10 @@
 
                 </div>
                 <div class="col-9 d-flex justify-content-end">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar usuario" aria-label="Buscar usuario">
+                    <form action="{{ url('buscarusuario') }}" class="form-inline" method="GET">
+                        <input class="form-control mr-sm-2" name="search" type="search" placeholder="Buscar usuario" aria-label="Buscar usuario">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
-                        </form>
+                    </form>
                 </div>
             </seccion>
             <seccion class="container">

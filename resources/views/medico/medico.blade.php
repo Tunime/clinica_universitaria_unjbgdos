@@ -14,10 +14,10 @@
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nuevomedico">+ AGREGAR MÉDICO</button>
                 </div>
                 <div class="col-9 d-flex justify-content-end">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar médico" aria-label="Buscar médico">
+                    <form action="{{ url('buscarmedico') }}" class="form-inline" method="GET">
+                        <input name="search" class="form-control mr-sm-2" type="search" placeholder="Buscar médico" aria-label="Buscar médico">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
-                        </form>
+                    </form>
                 </div>
             </seccion>
             <seccion class="container">

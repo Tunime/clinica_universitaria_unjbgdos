@@ -10,6 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//buscador
+Route::get("buscarusuario","UsuarioController@mySearch");
+Route::get("buscarpaciente","PacienteController@mySearch");
+Route::get("buscarmedico","MedicoController@mySearch");
+
+
+
 
 Route::get('/', function () {
     return view('inicio.inicio');

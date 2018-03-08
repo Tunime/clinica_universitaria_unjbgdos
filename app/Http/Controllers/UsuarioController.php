@@ -8,10 +8,19 @@ use App\Auditoriauser;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 use Hash;
+use DB;
 
 
 class UsuarioController extends Controller
 {
+    public function mySearch(Request $request)
+    {
+        $usuarios = DB::table('users')
+        ->where('nombre','like','%'.$request->search.'%')
+        ->paginate(5);
+        return view('usuario/usuario',compact('usuarios'));
+        
+    }
     //esta funcion se ejcuta al principio
     public function index(Request $request)
     {
