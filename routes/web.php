@@ -52,9 +52,9 @@ Route::group(['middleware' => 'rolesusuario'], function () {
     Route::resource('/pacientes', 'PacienteController');
     Route::resource('/medicos', 'MedicoController');
     Route::resource('/atenciones', 'AtencionController');
-    Route::resource('/auditoria/medico', 'AuditoriamedicoController');
-    Route::resource('/auditoria/paciente', 'AuditoriapacienteController');
-    Route::resource('/auditoria/usuario', 'AuditoriauserController');
+    Route::resource('/auditoria/medic', 'AuditoriamedicoController');
+    Route::resource('/auditoria/pacien', 'AuditoriapacienteController');
+    Route::resource('/auditoria/usuar', 'AuditoriauserController');
 });
 
 Route::get('/reportes', function () {

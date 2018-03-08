@@ -59,15 +59,15 @@
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
-                                <a class="nav-link" href="/auditoria/paciente">AUDITORIA<br>PACIENTE</a>
+                                <a class="nav-link" href="/auditoria/pacien">AUDITORIA<br>PACIENTE</a>
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
-                                <a class="nav-link" href="/auditoria/medico">AUDITORIA<br>MÉDICOS</a>
+                                <a class="nav-link" href="/auditoria/medic">AUDITORIA<br>MÉDICOS</a>
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
-                                <a class="nav-link" href="/auditoria/usuario">AUDITORIA<br>USUARIOS</a>
+                                <a class="nav-link" href="/auditoria/usuar">AUDITORIA<br>USUARIOS</a>
                             </li>
                         @else
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
