@@ -16,10 +16,10 @@
                     <thead>
                         <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nombre apellido</th>
-                        <th scope="col">Ocupacion</th>
-                        <th scope="col">DNI</th>
-                        <th scope="col">Razon del cambio</th>
+                        <th scope="col">Nombre y Apellidos:</th>
+                        <th scope="col">Ocupación:</th>
+                        <th scope="col">DNI:</th>
+                        <th scope="col">Razón del cambio:</th>
                         </tr>
                     </thead>
                     <tbody>

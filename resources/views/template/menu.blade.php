@@ -25,7 +25,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Salir
+                        SALIR
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
@@ -39,19 +39,19 @@
                         @if( Auth::user()->tipo_usuario == 'admin' )
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">home</i>
-                                <a class="nav-link" href="/inicio">Inicio</a>
+                                <a class="nav-link" href="/inicio">INICIO</a>
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">supervisor_account</i>
-                                <a class="nav-link" href="/usuario">Usuarios</a>
+                                <a class="nav-link" href="/usuario">USUARIOS</a>
                             </li>
                             <li class="nav-item d-flex align-items-center menu_lateral--item">
                                 <i class="material-icons">perm_contact_calendar</i>
-                                <a class="nav-link" href="/pacientes">Pacientes</a>
+                                <a class="nav-link" href="/pacientes">PACIENTES</a>
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">face</i>
-                                <a class="nav-link" href="/medicos">Medicos</a>
+                                <a class="nav-link" href="/medicos">MÉDICO</a>
                             </li>
                             <!--<li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
@@ -59,28 +59,28 @@
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
-                                <a class="nav-link" href="/auditoria/paciente">Auditoria<br>Paciente</a>
+                                <a class="nav-link" href="/auditoria/paciente">AUDITORIA<br>PACIENTE</a>
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
-                                <a class="nav-link" href="/auditoria/medico">Auditoria<br>Medicos</a>
+                                <a class="nav-link" href="/auditoria/medico">AUDITORIA<br>MÉDICOS</a>
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">find_in_page</i>
-                                <a class="nav-link" href="/auditoria/usuario">Auditoria<br>usuarios</a>
+                                <a class="nav-link" href="/auditoria/usuario">AUDITORIA<br>USUARIOS</a>
                             </li>
                         @else
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">home</i>
-                                <a class="nav-link" href="/inicio">Inicio</a>
+                                <a class="nav-link" href="/inicio">INICIO</a>
                             </li>
                             <li class="nav-item d-flex align-items-center menu_lateral--item">
                                 <i class="material-icons">perm_contact_calendar</i>
-                                <a class="nav-link" href="/pacientes">Pacientes</a>
+                                <a class="nav-link" href="/pacientes">PACIENTES</a>
                             </li>
                             <li class="nav-item d-flex  align-items-center menu_lateral--item">
                                 <i class="material-icons">description</i>
-                                <a class="nav-link" href="/atenciones">Atenciones</a>
+                                <a class="nav-link" href="/atenciones">ATENCIONES</a>
                             </li>
                         @endif
                     </ul>

@@ -5,7 +5,7 @@
         <seccion class="container contenedor--contenido">
             <seccion class="row contenedor--contenido_titulo">
                 <div class="col">
-                    <h3>Lista de usuarios</h3>
+                    <h3>Lista de Médicos</h3>
                 </div>
             </seccion>
             <hr></hr>
@@ -115,8 +115,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Razon del cambio</label>
-                        <textarea class="form-control" name="autrazon" id="exampleFormControlTextarea1" rows="3" placeholder="Cual es la razon de la modificacion..." required></textarea>
+                        <label for="exampleFormControlTextarea1">Razón del cambio:</label>
+                        <textarea class="form-control" name="autrazon" id="exampleFormControlTextarea1" rows="3" placeholder="Cual es la razón de la modificación..." required></textarea>
                     </div>
                   <div class="modal-footer">
                     <a href="/medicos" type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</a>

@@ -72,28 +72,28 @@
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col form-group">
-                        <label for="recipient-name" class="col-form-label">Nombre</label>
+                        <label for="recipient-name" class="col-form-label">Nombre:</label>
                         <input type="name" name="nombre"  class="form-control" id="recipient-name">
                     </div>
                     <div class="col form-group">
-                        <label for="recipient-name" class="col-form-label">Apellido</label>
+                        <label for="recipient-name" class="col-form-label">Apellido:</label>
                         <input type="lastname" name="apellido" class="form-control" id="recipient-name">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Nick</label>
+                    <label for="recipient-name" class="col-form-label">Nick:</label>
                     <input type="text" name="nick" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Email</label>
+                    <label for="recipient-name" class="col-form-label">Email:</label>
                     <input type="email" name="email" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Contraseña</label>
+                    <label for="recipient-name" class="col-form-label">Contraseña:</label>
                     <input type="password" name="contra" class="form-control" id="recipient-name">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Tipo usuario</label>
+                    <label for="exampleFormControlSelect1">Tipo usuario:</label>
                     <select class="form-control" name="tipo" id="exampleFormControlSelect1">
                       <option>Administrador</option>
                       <option>Invitado</option>
