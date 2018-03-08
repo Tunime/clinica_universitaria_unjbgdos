@@ -24,8 +24,8 @@
                 @guest
                     <a class="nav-item nav-link" href="/#servicios">Servicios</a>
                     <a class="nav-item nav-link" href="/#especialidad">Especialidades</a>
-                    <a class="nav-item nav-link" href="/#contactanos">contactanos</a>
-                    <a class="nav-item nav-link text-warning" href="/login">login</a>
+                    <a class="nav-item nav-link" href="/#contactanos">Contactanos</a>
+                    <a class="nav-item nav-link text-warning" href="/login">LOGIN</a>
                 @else
                     <a class="nav-item nav-link" href="/#servicios">Servicios</a>
                     <a class="nav-item nav-link" href="/#especialidad">Especialidades</a>
@@ -55,66 +55,66 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-2">
-                            <span><h6>Nombre</h6><span>{{$paciente->pa_nombre}}</span></span>
+                            <span><h6>Nombre:</h6><span>{{$paciente->pa_nombre}}</span></span>
                         </div>
                         <div class="col-2">
-                            <span><h6>Apellido</h6><span>{{$paciente->pa_apellido}}</span></span>
+                            <span><h6>Apellido:</h6><span>{{$paciente->pa_apellido}}</span></span>
                         </div>
                         <div class="col-2">
-                            <span><h6>DNI</h6><span>{{$paciente->dni}}</span></span>
+                            <span><h6>DNI:</h6><span>{{$paciente->dni}}</span></span>
                         </div>
                     </div>
                     <div class="row pt-2">
                         <div class="col-2">
-                            <span><h6>Fecha nacimiento</h6><span>{{$paciente->fech_nacimiento}}</span></span>
+                            <span><h6>Fecha nacimiento:</h6><span>{{$paciente->fech_nacimiento}}</span></span>
                         </div>
                         <div class="col-2">
-                            <span><h6>genero</h6><span>{{$paciente->genero}}</span></span>
+                            <span><h6>Género:</h6><span>{{$paciente->genero}}</span></span>
                         </div>
                         <div class="col">
-                            <span><h6>Direcion</h6><span>{{$paciente->direccion}}</span></span>
+                            <span><h6>Direción:</h6><span>{{$paciente->direccion}}</span></span>
                         </div>
                     </div>
                     <hr>
                     @foreach ($historial as $historia)
                     <div class="row pt-3 pb-3">
                         <div class="col">
-                            <h2>ATENCION</h2>
+                            <h2>ATENCIÓN</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-2">
-                            <span><h5>Fecha</h5><span>{{$historia->fech_atencion}}</span></span>
+                            <span><h5>Fecha:</h5><span>{{$historia->fech_atencion}}</span></span>
                         </div>
                         <div class="col-2">
-                            <span><h5>Hora</h5><span>{{$historia->hora_atencion}}</span></span>
+                            <span><h5>Hora:</h5><span>{{$historia->hora_atencion}}</span></span>
                         </div>
                         <div class="col-2">
-                            <span><h5>Especialida</h5><span>{{$historia->especialidad}}</span></span>
+                            <span><h5>Especialida:</h5><span>{{$historia->especialidad}}</span></span>
                         </div>
                         <div class="col-3">
-                            <span><h5>Medico</h5><span>{{$historia->nombre}} {{$historia->apellido}}</span></span>
+                            <span><h5>Medico:</h5><span>{{$historia->nombre}} {{$historia->apellido}}</span></span>
                         </div>
                     </div>
                     <div class="row pt-3">
                          <div class="col-2">
-                            <span><h5>Peso</h5><span>{{$historia->peso}}</span> kg</span>
+                            <span><h5>Peso:</h5><span>{{$historia->peso}}</span> kg</span>
                         </div>
                         <div class="col-2">
-                            <span><h5>Talla</h5><span>{{$historia->talla}}</span> mt</span>
+                            <span><h5>Talla:</h5><span>{{$historia->talla}}</span> mt</span>
                         </div>
                         <div class="col">
-                            <h5>Observaciones</h5>
+                            <h5>Observaciones:</h5>
                             <p>{{$historia->observacion}}</p>
                         </div>
                     </div>
                     <div class="row pt-3">
                         <div class="col-4">
-                            <h5>Diagnostico</h5>
+                            <h5>Diagnóstico:</h5>
                             <p>{{$historia->diagnostico}}</p>
                         </div>
                         <div class="col">
-                            <h5>Tratamiento</h5>
+                            <h5>Tratamiento:</h5>
                             <p>{{$historia->tratamiento}}</p>
                         </div>
                     </div>
@@ -128,9 +128,6 @@
         
     </section>
     <!--MODULO DE FOOTER-->
-   
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

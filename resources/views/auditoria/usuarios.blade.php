@@ -5,7 +5,7 @@
         <seccion class="container contenedor--contenido">
             <seccion class="row contenedor--contenido_titulo">
                 <div class="col">
-                    <h3>Cambios hechos a Pacientes</h3>
+                    <h3>Cambios hechos a Usuarios</h3>
                 </div>
             </seccion>
             <hr>
@@ -16,10 +16,10 @@
                     <thead>
                         <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nombre apellido</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">tipo usuario</th>
-                        <th scope="col">razon</th>
+                        <th scope="col">Nombre y Apellidos:</th>
+                        <th scope="col">Email:</th>
+                        <th scope="col">Tipo usuario:</th>
+                        <th scope="col">Razón:</th>
                         </tr>
                     </thead>
                     <tbody>

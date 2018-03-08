@@ -5,7 +5,7 @@
         <seccion class="container contenedor--contenido">
             <seccion class="row contenedor--contenido_titulo">
                 <div class="col">
-                    <h3>Cambios hechos a Doctores</h3>
+                    <h3>Cambios hechos a Médicos</h3>
                 </div>
             </seccion>
             <hr>
@@ -16,11 +16,11 @@
                     <thead>
                         <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nombre apellido</th>
-                        <th scope="col">Codigo medico</th>
-                        <th scope="col">DNI</th>
-                        <th scope="col">Celular</th>
-                        <th scope="col">Razon del cambio</th>
+                        <th scope="col">Nombre y Apellidos:</th>
+                        <th scope="col">Código del médico:</th>
+                        <th scope="col">DNI:</th>1
+                        <th scope="col">Celular:</th>
+                        <th scope="col">Razón del cambio:</th>
                         </tr>
                     </thead>
                     <tbody>

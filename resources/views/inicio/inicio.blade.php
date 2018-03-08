@@ -162,9 +162,9 @@
         <div class="container d-flex flex-column justify-content-center align-items-center">
             <div class="row m-4">
                 <div class="col"><a class="text-white" href="#">Servicios</a></div>
-                <div class="col"><a class="text-white" href="#">Especialidad</a></div>
-                <div class="col"><a class="text-white" href="#">Cntactanos</a></div>
-                <div class="col"><a class="text-white" href="#">login</a></div>  
+                <div class="col"><a class="text-white" href="#">Especialidades</a></div>
+                <div class="col"><a class="text-white" href="#">Contactanos</a></div>
+                <div class="col"><a class="text-white" href="#">LOGIN</a></div>  
             </div>
             <p class="text-white">Contruido por <a href="#">Alvaromoca y su fiel escudero</a></p>
         </div>

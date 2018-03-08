@@ -35,7 +35,7 @@
                             {{ Auth::user()->nombre }} <span class="caret"></span>
                     </a>
                     <a class="nav-link active"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Salir
+                        SALIR
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}

@@ -5,7 +5,7 @@
         <seccion class="container contenedor--contenido">
             <seccion class="row contenedor--contenido_titulo">
                 <div class="col">
-                    <h3>Lista de usuarios</h3>
+                    <h3>Lista de Pacientes</h3>
                 </div>
             </seccion>
             <hr></hr>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="row">
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1" readonly>Estado civil</label>
+                        <label for="exampleFormControlSelect1" readonly>Estado civil:</label>
                         <select class="form-control" name="autestado_civil" id="exampleFormControlSelect1" readonly>
                         <option>{{ $paciente->estado_civil}}</option>
                         <option readonly>Soltero(a)</option>
@@ -62,7 +62,7 @@
                         </select>
                     </div>
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1" readonly>genero</label>
+                        <label for="exampleFormControlSelect1" readonly>Género:</label>
                         <select class="form-control" name="autgenero" id="exampleFormControlSelect1" readonly>
                             <option>{{ $paciente->genero}}</option>
                             <option>Hombre</option>
@@ -109,7 +109,7 @@
                 </div>
                 <div class="row">
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1">Estado Civil</label>
+                        <label for="exampleFormControlSelect1">Estado Civil:</label>
                         <select class="form-control" name="estado_civil" id="exampleFormControlSelect1">
                         <option>{{ $paciente->estado_civil}}</option>
                         <option>Soltero(a)</option>
@@ -119,7 +119,7 @@
                         </select>
                     </div>
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1">Genero</label>
+                        <label for="exampleFormControlSelect1">Género:</label>
                         <select class="form-control" name="genero" id="exampleFormControlSelect1">
                             <option>{{ $paciente->genero}}</option>
                             <option>Hombre</option>
@@ -129,8 +129,8 @@
                     </div>
                 </div>
                  <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Razon del cambio</label>
-                    <textarea class="form-control" name="autrazon" id="exampleFormControlTextarea1" rows="3" placeholder="Sual es la razon de cambio..." required></textarea>
+                    <label for="exampleFormControlTextarea1">Razón del cambio</label>
+                    <textarea class="form-control" name="autrazon" id="exampleFormControlTextarea1" rows="3" placeholder="Cual es la razón de cambio..." required></textarea>
                 </div>
                   <div class="modal-footer">
                     <a href="/pacientes" type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</a>
