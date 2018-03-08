@@ -18,7 +18,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Nombre y Apellidos:</th>
                         <th scope="col">Código del médico:</th>
-                        <th scope="col">DNI:</th>1
+                        <th scope="col">DNI:</th>
                         <th scope="col">Celular:</th>
                         <th scope="col">Razón del cambio:</th>
                         </tr>

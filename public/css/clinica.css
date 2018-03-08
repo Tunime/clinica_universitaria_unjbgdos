@@ -19,3 +19,14 @@
 .txtunjbg{
     color: #852828;
 }
+.ir-arriba {
+	display:none;
+	padding:10px;
+	background:#FEC007;
+	font-size:30px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
