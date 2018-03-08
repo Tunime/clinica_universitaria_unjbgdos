@@ -14,8 +14,8 @@
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nuevopaciente">+ NUEVA ATENCIÓN</button>
                 </div>
                 <div class="col-9 d-flex justify-content-end">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar atención" aria-label="Buscar atención">
+                    <form action="{{ url('buscaratencion') }}" class="form-inline" method="GET">
+                        <input name="search" class="form-control mr-sm-2" type="search" placeholder="Buscar atención" aria-label="Buscar atención">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
                     </form>
                 </div>

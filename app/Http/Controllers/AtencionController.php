@@ -10,6 +10,14 @@ use PDF;
 class AtencionController extends Controller
 {
     //
+    public function mySearch(Request $request)
+    {
+        $atenciones = DB::table('atenciones')
+        ->where('dni_paciente','like','%'.$request->search.'%')
+        ->paginate(5);
+        return view('atencion.atenciones',compact('atenciones'));
+        
+    }
      //esta funcion se ejcuta al principio
      public function index(Request $request)
      {

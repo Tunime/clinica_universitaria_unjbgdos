@@ -14,6 +14,8 @@
 Route::get("buscarusuario","UsuarioController@mySearch");
 Route::get("buscarpaciente","PacienteController@mySearch");
 Route::get("buscarmedico","MedicoController@mySearch");
+Route::get("buscaratencion","AtencionController@mySearch");
+
 
 
 
